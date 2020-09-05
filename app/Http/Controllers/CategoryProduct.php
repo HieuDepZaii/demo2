@@ -31,4 +31,12 @@ class CategoryProduct extends Controller
 
         return Redirect::to(route('CategoryProduct.add_category'));
     }
+    public function like_category_product($id){
+        $category_products=DB::table('catogory_product')->where('id',$id)->update(['yeu_thich'=>1]);
+        return Redirect::to(route('CategoryProduct.all_category'));
+    }
+    public function unlike_category_product($id){
+        $category_products=DB::table('catogory_product')->where('id',$id)->update(['yeu_thich'=>0]);
+        return Redirect::to(route('CategoryProduct.all_category'));
+    }
 }

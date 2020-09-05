@@ -51,13 +51,18 @@
                             <td>{{$category_product->category_name}}</td>
                         <td><span class="text-ellipsis">{{$category_product->mo_ta}}</span></td>
                         <td><span class="text-ellipsis">
-                            @php
+                            <?php
                                 if($category_product->yeu_thich==1){
-                                    echo '<a href="#"><span class="fa fa-thumbs-up fa-thumb-styling-up"></span>';
+                            ?>
+                            <a href="{{ route('CategoryProduct.unlike', ['id'=>$category_product->id]) }}"><span class="fa fa-thumbs-up fa-thumb-styling-up"></span></a>
+                            <?php
                                 }else {
-                                    echo '<a href="#"><span class="fa fa-thumbs-down fa-thumb-styling-down"></span>';
+                            ?>
+                                <a href="{{ route('CategoryProduct.like', ['id'=>$category_product->id]) }}"><span class="fa fa-thumbs-down fa-thumb-styling-down"></span></a>
+                            <?php
                                 }
-                            @endphp
+                            ?>
+
                         </span></td>
                         <td><span class="text-ellipsis">{{$category_product->created_at}}</span></td>
                             <td>

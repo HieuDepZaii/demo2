@@ -27,3 +27,5 @@ Route::get('/admin/logout','AdminController@logout')->name('admin.logout');
 Route::get('admin/add_category_product','CategoryProduct@add_category')->name('CategoryProduct.add_category');
 Route::get('admin/all_category_product','CategoryProduct@all_category')->name('CategoryProduct.all_category');
 Route::post('/admin/save_category_product','CategoryProduct@save_category_product')->name('CategoryProduct.save_category');
+Route::get('/admin/like_category_product/{id}','CategoryProduct@like_category_product')->name('CategoryProduct.like');
+Route::get('/admin/unlike_category_product/{id}','CategoryProduct@unlike_category_product')->name('CategoryProduct.unlike');
