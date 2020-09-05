@@ -54,11 +54,11 @@
                             <?php
                                 if($category_product->yeu_thich==1){
                             ?>
-                            <a href="{{ route('CategoryProduct.unlike', ['id'=>$category_product->id]) }}"><span class="fa fa-thumbs-up fa-thumb-styling-up"></span></a>
+                            <a href="{{ route('CategoryProduct.unlike', ['id'=>$category_product->id]) }}" title="bấm để bỏ thích"><span class="fa fa-thumbs-up fa-thumb-styling-up"></span></a>
                             <?php
                                 }else {
                             ?>
-                                <a href="{{ route('CategoryProduct.like', ['id'=>$category_product->id]) }}"><span class="fa fa-thumbs-down fa-thumb-styling-down"></span></a>
+                                <a href="{{ route('CategoryProduct.like', ['id'=>$category_product->id]) }}" title="bấm để thích"><span class="fa fa-thumbs-down fa-thumb-styling-down"></span></a>
                             <?php
                                 }
                             ?>
