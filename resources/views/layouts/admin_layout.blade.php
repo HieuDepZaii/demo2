@@ -301,7 +301,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="wthree-copyright">
 			  <p>2020 by Hieu Dep Trai</a></p>
 			</div>
-		  </div>
+          </div>
+
   	<!-- / footer -->
 	</section>
 	<!--main content end-->

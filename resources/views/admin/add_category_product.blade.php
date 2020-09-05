@@ -25,10 +25,10 @@
                                 <label for="exampleInputPassword1">mô tả</label>
                                 <textarea class="form-control" placeholder="mô tả" name="category_description"></textarea>
                             </div>
-                            <select class="form-control m-bot15">
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select class="form-control m-bot15" name="yeu_thich">
+                                <option value="1">yêu thích</option>
+                                <option value="0">không yêu thích</option>
+
                             </select>
                             <br>
                             <button type="submit" class="btn btn-info">Thêm</button>

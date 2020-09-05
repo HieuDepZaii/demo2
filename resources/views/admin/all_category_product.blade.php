@@ -39,6 +39,7 @@
                             </th>
                             <th>tên danh mục</th>
                             <th>mô tả</th>
+                            <th>yêu thích</th>
                             <th>ngày thêm</th>
                             <th style="width:30px;"></th>
                         </tr>
@@ -49,6 +50,15 @@
                             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
                             <td>{{$category_product->category_name}}</td>
                         <td><span class="text-ellipsis">{{$category_product->mo_ta}}</span></td>
+                        <td><span class="text-ellipsis">
+                            @php
+                                if($category_product->yeu_thich==1){
+                                    echo '<a href="#"><span class="fa fa-thumbs-up fa-thumb-styling-up"></span>';
+                                }else {
+                                    echo '<a href="#"><span class="fa fa-thumbs-down fa-thumb-styling-down"></span>';
+                                }
+                            @endphp
+                        </span></td>
                         <td><span class="text-ellipsis">{{$category_product->created_at}}</span></td>
                             <td>
                                 <a href="" class="active" ui-toggle-class=""><i
@@ -57,7 +67,7 @@
                             </td>
                         </tr>
                         @endforeach
-                        
+
                     </tbody>
                 </table>
             </div>

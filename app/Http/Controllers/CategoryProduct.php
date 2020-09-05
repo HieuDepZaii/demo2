@@ -20,6 +20,7 @@ class CategoryProduct extends Controller
         $data=array();
         $data['category_name']=$request->category_name;
         $data['mo_ta']=$request->category_description;
+        $data['yeu_thich']=$request->yeu_thich;
         print_r($data);
         try {
             DB::table('catogory_product')->insert($data);
@@ -27,7 +28,7 @@ class CategoryProduct extends Controller
         } catch (\Throwable $th) {
             Session::put('message','có lỗi xảy ra');
         }
-       
+
         return Redirect::to(route('CategoryProduct.add_category'));
     }
 }
